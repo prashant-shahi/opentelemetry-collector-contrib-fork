@@ -25,6 +25,7 @@ import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/azuremonitorexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/carbonexporter"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/clickhouseexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/dynatraceexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/elasticexporter"
@@ -233,6 +234,7 @@ func Components() (component.Factories, error) {
 		sumologicexporter.NewFactory(),
 		tanzuobservabilityexporter.NewFactory(),
 		zipkinexporter.NewFactory(),
+		clickhouseexporter.NewFactory(),
 	}
 	for _, exp := range factories.Exporters {
 		exporters = append(exporters, exp)

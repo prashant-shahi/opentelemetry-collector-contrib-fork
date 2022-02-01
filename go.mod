@@ -104,7 +104,7 @@ require (
 	github.com/prometheus/prometheus v1.8.2-0.20210621150501-ff58416a0b02
 	github.com/stretchr/testify v1.7.0
 	go.opentelemetry.io/collector v0.38.0
-	golang.org/x/sys v0.0.0-20211007075335-d3039528d8ac
+	golang.org/x/sys v0.0.0-20211013075003-97ac67df715c
 )
 
 require github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbatlasreceiver v0.38.0
@@ -156,6 +156,7 @@ require (
 	github.com/checkpoint-restore/go-criu/v5 v5.0.0 // indirect
 	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575 // indirect
 	github.com/cilium/ebpf v0.6.2 // indirect
+	github.com/cloudflare/golz4 v0.0.0-20150217214814-ef862a3cdc58 // indirect
 	github.com/containerd/console v1.0.2 // indirect
 	github.com/containerd/containerd v1.5.7 // indirect
 	github.com/containerd/ttrpc v1.0.2 // indirect
@@ -180,7 +181,7 @@ require (
 	github.com/facebookgo/muster v0.0.0-20150708232844-fd3d7953fd52 // indirect
 	github.com/fatih/color v1.12.0 // indirect
 	github.com/felixge/httpsnoop v1.0.2 // indirect
-	github.com/form3tech-oss/jwt-go v3.2.3+incompatible // indirect
+	github.com/form3tech-oss/jwt-go v3.2.5+incompatible // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/getsentry/sentry-go v0.11.0 // indirect
 	github.com/go-kit/kit v0.11.0 // indirect
@@ -190,6 +191,7 @@ require (
 	github.com/go-ole/go-ole v1.2.5 // indirect
 	github.com/go-redis/redis/v7 v7.4.1 // indirect
 	github.com/go-resty/resty/v2 v2.1.1-0.20191201195748-d7b97669fe48 // indirect
+	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/go-zookeeper/zk v1.0.2 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
@@ -205,16 +207,17 @@ require (
 	github.com/google/go-cmp v0.5.6 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
-	github.com/google/uuid v1.3.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.1.1 // indirect
 	github.com/googleapis/gnostic v0.5.5 // indirect
 	github.com/gophercloud/gophercloud v0.18.0 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
 	github.com/hashicorp/consul/api v1.10.1 // indirect
+	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-hclog v0.16.2 // indirect
 	github.com/hashicorp/go-immutable-radix v1.3.1 // indirect
+	github.com/hashicorp/go-multierror v1.1.0 // indirect
 	github.com/hashicorp/go-rootcerts v1.0.2 // indirect
 	github.com/hashicorp/go-uuid v1.0.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
@@ -294,7 +297,6 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/zipkin v0.38.0 // indirect
 	github.com/open-telemetry/opentelemetry-log-collection v0.22.0 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
-	github.com/opencontainers/image-spec v1.0.2-0.20190823105129-775207bd45b6 // indirect
 	github.com/opencontainers/runc v1.0.2 // indirect
 	github.com/opencontainers/runtime-spec v1.0.3-0.20210326190908-1c3f411f0417 // indirect
 	github.com/opencontainers/selinux v1.8.2 // indirect
@@ -334,7 +336,6 @@ require (
 	github.com/spf13/cobra v1.2.1 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/spf13/viper v1.9.0 // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/subosito/gotenv v1.2.0 // indirect
 	github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635 // indirect
@@ -362,7 +363,6 @@ require (
 	go.etcd.io/bbolt v1.3.6 // indirect
 	go.mongodb.org/atlas v0.13.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
-	go.opentelemetry.io/collector/model v0.38.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.25.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.25.0 // indirect
 	go.opentelemetry.io/contrib/zpages v0.25.0 // indirect
@@ -376,9 +376,8 @@ require (
 	go.opentelemetry.io/otel/trace v1.0.1 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
-	go.uber.org/zap v1.19.1 // indirect
-	golang.org/x/crypto v0.0.0-20210920023735-84f357641f63 // indirect
-	golang.org/x/net v0.0.0-20210927181540-4e4d966f7476 // indirect
+	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+	golang.org/x/net v0.0.0-20211013171255-e13a2654a71e // indirect
 	golang.org/x/oauth2 v0.0.0-20211005180243-6b3c2da341f1 // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/term v0.0.0-20210220032956-6a3ed077a48d // indirect
@@ -411,6 +410,17 @@ require (
 	k8s.io/utils v0.0.0-20210819203725-bdf08cb9a70a // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.1.2 // indirect
 	sigs.k8s.io/yaml v1.2.0 // indirect
+)
+
+require (
+	github.com/ClickHouse/clickhouse-go v1.5.3
+	github.com/golang-migrate/migrate/v4 v4.15.1
+	github.com/google/uuid v1.3.0
+	github.com/jmoiron/sqlx v1.3.1
+	github.com/opencontainers/image-spec v1.0.2-0.20190823105129-775207bd45b6 // indirect
+	github.com/spf13/viper v1.9.0
+	go.opentelemetry.io/collector/model v0.38.0
+	go.uber.org/zap v1.19.1
 )
 
 // Replace references to modules that are in this repository with their relateive paths
@@ -657,6 +667,8 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumu
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/googlecloudexporter => ./exporter/googlecloudexporter
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackdriverexporter => ./exporter/stackdriverexporter
+
+replace go.opentelemetry.io/collector => go.opentelemetry.io/collector v0.38.0
 
 // see https://github.com/open-telemetry/opentelemetry-collector-contrib/issues/4433
 exclude github.com/StackExchange/wmi v1.2.0
