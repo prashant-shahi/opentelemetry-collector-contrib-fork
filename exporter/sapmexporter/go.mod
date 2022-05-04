@@ -8,7 +8,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/batchperresourceattr v0.43.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/jaeger v0.43.0
 	github.com/signalfx/sapm-proto v0.7.2
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 	go.opentelemetry.io/collector v0.43.1
 	go.opentelemetry.io/collector/model v0.43.1
 	go.uber.org/zap v1.20.0
