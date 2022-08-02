@@ -25,7 +25,7 @@ require (
 require (
 	github.com/cenkalti/backoff/v4 v4.1.2
 	github.com/shirou/gopsutil v3.21.9+incompatible // indirect
-	go.uber.org/multierr v1.7.0
+	go.uber.org/multierr v1.8.0
 )
 
 require (
